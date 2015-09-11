@@ -40,7 +40,7 @@ class MovieDataPre
 	# heat reflected from the ratio of the number of user that has viewed the movie and number of all users
 	# valuation reflected from the ratio of total points from all viewers and the full mark from this amount of viewers
 	# I think heat is more important to popularity so I doubled the heat part.
-	def popularity(movie_id)
+	"""def popularity(movie_id)
 		data = @moviefile[movie_id]
 		rate_num = data.length
 		sum = 0
@@ -59,7 +59,7 @@ class MovieDataPre
 		end
 		poplist = poplist.sort_by {|k, v| v}.reverse
 		return poplist
-	end
+	end"""
 
 	def similarity(user1,user2)
 		data1 = @userfile[user1]

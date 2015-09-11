@@ -130,6 +130,8 @@ class MovieData
       lines.each {|line| data.push(line_process(line))}
       result = MovieTest.new(data)
       result.diff_compute
+      puts "average error is: #{result.mean()}"
+      puts "standard deviation of the error is: #{result.stddev}"
       puts "root mean square error is: #{result.rms()}"
     end
     return result
@@ -138,4 +140,6 @@ class MovieData
 end
 
 m = MovieData.new("ml-100k",:u1)
+puts Time.now
 m.run_test()
+puts Time.now
